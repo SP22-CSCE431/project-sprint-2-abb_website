@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2022_02_28_052154) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "admins", force: :cascade do |t|
     t.string "email", null: false
     t.string "full_name"
@@ -25,6 +26,8 @@ ActiveRecord::Schema.define(version: 2022_02_28_052154) do
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
+=======
+>>>>>>> 39d23a70e0ba031ebf385c9052986e7de5d82683
   create_table "applications", force: :cascade do |t|
     t.string "name"
     t.string "email"

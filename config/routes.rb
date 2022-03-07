@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root to: 'page#index'
   #root to: 'dashboards#show'
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
@@ -7,6 +8,11 @@ Rails.application.routes.draw do
     get 'admins/sign_out', to: 'admins/sessions#destroy', as: :destroy_admin_session
     #resources :sessions
   end
+=======
+  resources :attendance_logs
+  resources :sponsors
+  resources :applications
+>>>>>>> 39d23a70e0ba031ebf385c9052986e7de5d82683
   resources :users
   resources :sessions
   
@@ -18,6 +24,9 @@ Rails.application.routes.draw do
   get '/about' => 'page#about'
   get '/contact' => 'page#contact'
   get '/recruitment' => 'page#recruitment'
+  get '/our_team' => 'page#our_team'
+  get '/login' => 'page#login'
+  get '/create_account' => 'page#create_account'
 
   resources :academic_tracker do 
   end
